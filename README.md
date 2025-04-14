@@ -24,7 +24,7 @@ A pasta venv deve estar dentro deste projeto, como abaixo:
 python3 -m venv venv
 ```
 
-###3. Rodar o projeto na porta 5001
+### 3. Rodar o projeto na porta 5001
 ```bash
 python3 app.py
 ```
