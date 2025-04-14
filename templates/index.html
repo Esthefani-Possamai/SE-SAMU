@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Especialista para SAMU</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Diagnóstico de Primeiros Socorros &#128657;</h1>
+      <form method="post">
+        <div class="form-group">
+          <label
+            ><input type="checkbox" name="inconsciente" /> Inconsciente</label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            ><input type="checkbox" name="nao_respirando" /> Não está
+            respirando</label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            ><input type="checkbox" name="sangramento_intenso" /> Sangramento
+            intenso</label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            ><input type="checkbox" name="fratura" /> Fratura aparente</label
+          >
+        </div>
+        <div class="form-group">
+          <div class="submit-button">
+            <input type="submit" value="Analisar" />
+          </div>
+        </div>
+      </form>
+
+      <div class="result">
+        {% if resultado %}
+        <h1>Resultado</h1>
+        <div>
+          <p><strong>Diagnóstico</strong></p>
+          <p class="result-description">{{ resultado.diagnostico }}</p>
+        </div>
+        <div>
+          <p><strong>Ação</strong></p>
+          <p class="result-description">{{ resultado.acao }}</p>
+        </div>
+        {% endif %} {% if resultado.explicacao %}
+        <p><strong>Explicação</strong></p>
+        <div class="result-description">
+          {% for item in resultado.explicacao %}
+          <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+
+        {% endif %}
+      </div>
+
+      <div class="detail">
+        <p>
+          Sistema especialista desenvolvido com <strong>Experta</strong>, uma
+          biblioteca Python para construção de sistemas especialistas fortemente
+          inspirada em CLIPS.
+        </p>
+        <p>
+          Equipe 4: Arthur Souza, Esthéfani Possamai, Gabriel Alves e Luís
+          Felipe Ceron Bellé.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
