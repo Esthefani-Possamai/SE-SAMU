@@ -18,13 +18,18 @@ A pasta venv deve estar dentro deste projeto, como abaixo:
 
 ![image](https://github.com/user-attachments/assets/2724935a-402e-4a0a-8579-a55eedf35564)
 
+### 2. Ativar
+```bash
+source venv/bin/activate
+```
 
-### 2. Inicializar
+
+### 3. Inicializar venv
 ```bash
 python3 -m venv venv
 ```
 
-### 3. Rodar o projeto na porta 5001
+### 4. Rodar o projeto na porta 5001
 ```bash
 python3 app.py
 ```
