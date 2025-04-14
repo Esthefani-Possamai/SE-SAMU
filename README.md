@@ -14,6 +14,11 @@ O `python3-venv` é necessário para criar um ambiente virtual. Para instalá-lo
 sudo apt install python3-venv
 ```
 
+A pasta venv deve estar dentro deste projeto, como abaixo:
+
+![image](https://github.com/user-attachments/assets/2724935a-402e-4a0a-8579-a55eedf35564)
+
+
 ### 2. Inicializar
 ```bash
 python3 -m venv venv
